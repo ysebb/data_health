@@ -1,0 +1,51 @@
+# --- SYSTÈME (macOS) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.idea
+
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.python-version
+# Environnements virtuels
+venv/
+.venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# --- JUPYTER NOTEBOOKS ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- MACHINE LEARNING / DATA ---
+# Ne pas versionner les gros datasets (souvent en .csv, .json, .parquet)
+# Il vaut mieux garder un petit exemple et ignorer le reste
+data/*.csv
+data/*.parquet
+data/*.h5
+data/*.pkl
+# Ignorer les modèles entraînés (trop lourds)
+models/*.joblib
+models/*.pth
+models/*.onnx
+models/*.pb
+
+# --- LOGS & TRACKING ---
+# Pour Tensorboard, MLflow ou Weights & Biases
+mlruns/
+logs/
+*.log
+
+# --- CONFIGURATION & SÉCURITÉ ---
+# Clés d'API (OpenAI, AWS, etc.)
+.env
+
+# --- Data ---
+/data
+/input
