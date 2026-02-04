@@ -13,8 +13,7 @@ df = pd.read_csv(IN_PATH)
 # Step 1: filter scope
 if 'region' in df.columns:
     df = df[df['region'] == 'Île-de-France']
-if 'classe_age' in df.columns:
-    df = df[df['classe_age'] == 'Tous âges']
+# Keep all real age groups; do not filter to "Tous âges".
 
 # Step 2: cleaning
 if 'taux_actes_sos_medecins' in df.columns:
