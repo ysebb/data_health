@@ -30,6 +30,11 @@ if 'date_semaine' in df.columns:
     df['annee'] = df['date_semaine'].dt.year
     df['mois'] = df['date_semaine'].dt.month
     df['semaine'] = df['date_semaine'].dt.isocalendar().week.astype('Int64')
+    df['annee_semaine'] = (
+        df['annee'].astype('Int64').astype(str)
+        + "-S"
+        + df['semaine'].astype('Int64').astype(str).str.zfill(2)
+    )
 
 if 'taux_hospitalisation' in df.columns and 'taux_passages_urgences' in df.columns:
     df['ratio_hosp'] = df['taux_hospitalisation'] / df['taux_passages_urgences']
